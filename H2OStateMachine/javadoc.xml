@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="private" additionalparam=" --module-path C:\Users\Joe.LAPTOP-VNMR71J5\EclipseWorkspace\SysMLinJava\bin;" author="true" classpath="../SysMLinJava/bin" destdir="doc" doctitle="H2OStateMachineDocs" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="h2ostates" source="17" sourcefiles="src/main/java/module-info.java" sourcepath="src/main/java" splitindex="true" use="true" version="true"/>
+    </target>
+</project>
