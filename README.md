@@ -1,0 +1,2 @@
+# SysMLinJavaModelExamples
+Example SysMLinJava models
