@@ -167,7 +167,7 @@ public class C4S2ExecutionDisplayConstraintBlock extends AnimatedAreaGeospatialD
 	 */
 	static
 	{
-		final String imageDir = "C:\\Users\\Joe.LAPTOP-VNMR71J5\\EclipseWorkspace\\C4S2SystemOfSystems\\";
+		final String imageDir = "C:\\ModelerOne\\EclipseWorkspace\\C4S2SystemOfSystems\\";
 		try
 		{
 			backgroundImageFileURL = Path.of(imageDir, "landImage.PNG").toAbsolutePath().toUri().toURL().toString();
