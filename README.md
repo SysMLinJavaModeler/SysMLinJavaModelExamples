@@ -1,6 +1,6 @@
 # SysMLinJava Model Examples
-### Examples of using SysMLinJava for high precision MBSE
 
+### Examples of using SysMLinJava for high precision MBSE
 SysMLinJava is a Java-based model development kit (MDK) for high-precision modeling of executable SysML models in the Java programming language.  This repository contains nine example models that are based on SysMLinJava.   Each example can be downloaded and imported into a IDE as a project.  The SysMLinJava module, on which the example model will depend, should be in the IDE as another java project.  The examples are fully tested and can be compiled, built, and executed within the scope of the IDE project.
 
 ## Installing the Example Models
@@ -36,19 +36,30 @@ The model consists of a command/control/computer/communications (C4) system, and
 
 The C4S2SystemsOfSystems model generates a number of displays, including an animated display of the radar, drone, and tank.  The animation display shows the location and movements of the radar, drone, and tank, including actual engagement of the strike drone on the tank.  The animation is driven by a constraint block in the model that binds to the radar, drone, and tank geospatial locations, translating them into display data that is transmitted to the animation display.  The model available in the repository now lacks the images needed for an actual animation display, but, using the animation display objects in the SysMLinJava API/MDF, a textual representation of the animation can be displayed.  The tool described above will, when available, provide the complete graphical display of the animation.
 
-As with the other example models, this model's dependencies are specified in the model's "module-info.java" file.  In addition to the standard Java API and the SysMLinJava module, it depends on the SysMLinJavaLibrary module as well.  
+As with the other example models, this model's dependencies are specified in the model's "module-info.java" file.  In addition to the standard Java API and the SysMLinJava module, it "requires" the SysMLinJavaLibrary module as well.  
 
 ### CableStayedBridge
 The CableStayedBridge model demonstrates how to build a model of many static forces interacting to provide a structure, e.g a "cable-stayed" bridge typical of modern day suspension bridges.  The model uses the SysML full-port to transfer forces from one structural component to another.  As might be expected of a suspension bridge, numerous port connections are used by the model.  The model also includes a number of vehicles that move across the brige deck, transfering their loads to the deck in new locations as they travel.  These vehicle loads are then trasferred via ports to the deck which transfers loads to the cables, which transfer loads to the pylon which transfer loads to the ground.
 
 The model includes a constraint block that binds constraint parameters to the loads on the bridge, translating/constraining the parameters into a dynamic bar chart display that shows the loads on the bridges cables as the vehicles move across the bridge deck.  Once again, a textual representation of the bar chart display can be produced by objects in the SysMLinJava API/MDF, but a tool will soon be available (for a modest fee) that can display a graphical bar chart of the cable loads.
 
-This model dependencies are specified in the model's "module-info.java" file.  In addition to the standard Java API, it depends only on the SysMLinJava module.  
+This model's dependencies are specified in the model's "module-info.java" file.  In addition to the standard Java API, it "requires transitive" only the SysMLinJava module.  
 
 ### ConnectedTanks
+The ConnectedTanks model demonstrates how to build a model of dynamic flows between "parts" of a block.  The model is a SysMLinJava implementation of the model by the same name described in "SysML Extension for Physical Interaction and Signal Flow Simulation", Object Management Group, Inc., 2018.  The SysMLinJava model is of a simple system of two tanks of fluid connected by a pipe. A minimal block structure consists of the two tanks and a pipe that connects the two.  The two tanks begin with different amounts of fluid in each with constraints used to specify the flows between the tanks via the connecting pipe.  The executable model changes the flow rates through the pipe and the amounts of fluid in the tanks until an equal pressure point is reached.
+
+
+The model uses the proxy port to represent the pipe/tank interfaces.  It includes a constraint block that binds constraint parameters to the fluid levels of the tanks.  The constraint parameters are translated/constrained into values on a line chart for time-based display of the equalizing fluid levels.  Once again, a textual representation of the line chart display can be produced by objects in the SysMLinJava API/MDF, but a tool will soon be available (for a modest fee) that can display a graphical line chart of the tank levels.
+
+This model's dependencies are specified in the model's "module-info.java" file.  In addition to the standard Java API, it "requires transitive" only the SysMLinJava module.  
 
 ### ElectricCircuit
+The ElectricCircuit model demonstrates how to build a model of system "parts" whose values are constrained and change over time.  The model is a SysMLinJava model implementation of the model of the same name as described in "SysML Extension for Physical Interaction and Signal Flow Simulation", Object Management Group, Inc., 2018.  The SysMLinJava model is of a simple electrical circuit.  The circuit consists of an AC voltage source in parallel with an RC series circuit and a RL series circuit.
 
+The model of the electric circuit uses of the SysML proxy port to model the interfaces between the electrical components.  It also uses the SysML constraint block to bind constraint parameters to the voltages and currents of the system components, i.e. the resistors, capacitor, and inductor.  These constraint parameters are translated/constrained into values on a series of line charts for time-based display of the voltages and currents.  Once again, a textual representation of the line chart displays can be produced by objects in the SysMLinJava API/MDF, but a tool will soon be available (for a modest fee) that can display the graphical version of the line charts of the voltages and currents.
+
+This model's dependencies are specified in the model's "module-info.java" file.  In addition to the standard Java API, it "requires transitive" only the SysMLinJava module.  
+ 
 ### H2OStateMachine
 
 ### HFDataLinkedSystem
