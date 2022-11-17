@@ -28,8 +28,8 @@ public class VolumeFlowElement extends SysMLProxyPort
 	 * @param contextBlock             the block of which this element is a port
 	 * @param implementingContextBlock the block in which this proxy port's
 	 *                                 interface is implemented, i.e. a {@code Tank}
-	 * @param index                    index of the port if member of an array of
-	 *                                 ports
+	 * @param index                    unique ID of the port, e.g. index if member of
+	 *                                 an array of ports
 	 */
 	public VolumeFlowElement(SysMLBlock contextBlock, Optional<? extends SysMLBlock> implementingContextBlock, Long id)
 	{
