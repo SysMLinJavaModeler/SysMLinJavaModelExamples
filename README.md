@@ -75,8 +75,11 @@ The C4S2SystemsOfSystems model demonstrates how to build a model for a "system-o
 The model consists of a command/control/computer/communications (C4) 
 
 ### MotorInWheelEV
+The MotorInWheelEV model demonstrates how to build a model of a system of mechanical, electrical, and structural components that is monitored and controlled by a human operator.  It is a SysMLinJava model of an electric vehicle that uses so-called "motor-in-wheel" technolog, i.e. each wheel is driven by its own electric motor.
 
-### TrafficSignalControlSystem
+The model of the EV uses the SysML full port for all its many interfaces between components and between the vehicle and the operator.  The operator and all components operate (execute) as finite state machines asynchronously (in their owh threads).  The model also uses a constraint block that binds constraint parameters to the electrical power values at each wheel.  The constraint parameters are then translated/constrained to power usage parameters over time.  These output parameters are sent to a line-chart display for a view of the power usage and efficiency versus distance traveled.  A textual representation of the line chart can be produced by objects in the SysMLinJava API/MDF.  A tool will soon be available (for a modest fee) that can display the line chart in graphical form. 
 
+## TrafficSignalControlSystem
+The TrafficSignalControlSystem model demonstrates how to model a system having sub-state machines for states in its state-machine.
 ## Conact for Comments, Questions, Requests for Training or Assistance
 Send any comments, questions, or requests for training or assistance to sysmlinjava@earthlink.net.
