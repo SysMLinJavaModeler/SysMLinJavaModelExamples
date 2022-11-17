@@ -93,7 +93,6 @@ public class PatientStateMachine extends SysMLStateMachine
 		};
 		onMotionTimeEffectActivity = (event, contextBlock) ->
 		{
-			System.out.println(getClass().getSimpleName() + ".onMotionTimeEffectActivity");			
 			Patient patient = (Patient)contextBlock.get();
 			patient.onMotionTime();
 		};
