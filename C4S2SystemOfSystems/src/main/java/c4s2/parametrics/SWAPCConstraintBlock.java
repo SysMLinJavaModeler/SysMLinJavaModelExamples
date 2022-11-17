@@ -24,7 +24,7 @@ import sysmlinjavalibrary.components.communications.siprnet.SIPRNetRouter;
  * weight, and power, cooling (SWAPC) of the C4S2 System. The constraint
  * includes the summation of all four of the parameters for each of the system's
  * components, i.e. SWAPC for the {@code C4S2ServicesComputer},
- * {@code C4S2OperatorServicesComputer}, {@code EthernetSwitchIPRouter}, {@
+ * {@code C4S2OperatorServicesComputer}, {@code EthernetSwitchIPRouter}, {@code 
  * SIPRNetRouter}. The constraint results, i.e. the SWAPC sums, are transmitted
  * to a display as an HTML table. As the SWAPC parameters are calculated once
  * during construction of the system model, the SWAPC sum parameters are
