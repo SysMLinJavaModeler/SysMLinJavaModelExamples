@@ -24,13 +24,15 @@ public class PulseSensorStateMachine extends SensorStateMachine
 		onSensedValueSignalEffectActivity = (event, contextBlock) ->
 		{
 			System.out.println(getClass().getSimpleName() + ".onSensedValueSignalEffectActivity(): event=" + event.get().toString());
-			if (event.get() instanceof PressureSignalEvent signalEvent)
+			if (event.get() instanceof PressureSignalEvent)
 			{
+				PressureSignalEvent signalEvent = (PressureSignalEvent)event.get();
 				PulseSensor sensor = (PulseSensor)contextBlock.get();
 				sensor.onPressureSignal(signalEvent.getSignal());
 			}
-			else if (event.get() instanceof TremorPresenceEvent signalEvent)
+			else if (event.get() instanceof TremorPresenceEvent)
 			{
+				TremorPresenceEvent signalEvent = (TremorPresenceEvent)event.get();
 				PulseSensor sensor = (PulseSensor)contextBlock.get();
 				sensor.onTremorPresence(signalEvent.getPresence());
 			}
