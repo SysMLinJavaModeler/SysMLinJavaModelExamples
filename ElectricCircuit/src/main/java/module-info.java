@@ -36,5 +36,6 @@ module ElectricCircuit
 {
 	exports electriccircuit;
 
+	requires java.logging;
 	requires transitive sysMLinJava;
 }
