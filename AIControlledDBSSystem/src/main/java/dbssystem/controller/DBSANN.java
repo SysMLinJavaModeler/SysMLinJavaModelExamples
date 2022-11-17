@@ -117,8 +117,6 @@ public class DBSANN extends SysMLClass implements NeuralNetwork
 			double[] trainTestDifference = new double[2];
 			trainTestDifference[0] = trainOutput[0] - testOutput[0];
 			trainTestDifference[1] = trainOutput[1] - testOutput[1];
-
-			System.out.println(String.format("%3d) %s %s %s %s", row, Arrays.toString(testInputRow), Arrays.toString(testOutput), Arrays.toString(trainOutput), Arrays.toString(trainTestDifference)));
 		}
 	}
 
