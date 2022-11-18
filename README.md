@@ -25,13 +25,13 @@ The example models are all licensed in accordance with the Apache license cited 
 The example SysMLinJava models demonstrate a variety of model types and patterns.  Each is explained briefly as follows.
 
 ### AIControlledDBSSystem
-The AIControlledDBSSystem model demonstrates how to build a SysMLinJava model for control and monitor systems that use specific types of control mechanisms, in this case control based on a trained artificial neural network (ANN).  It also demonstrates how to build a model that executes in multiple processes (JVMs).  The example model includes a number of jar files that are needed to build, train, and execute the ANN.  These dependencies are included in the model's "module-info" file and should be included on the java command line's `--module-path` for the applicable process.  A `.bat` file for each of the processes used to execute the model is included in the example model folder for possible use in executing the model.  Processes should be started in the following sequence.
+The AIControlledDBSSystem model demonstrates how to build a SysMLinJava model for control and monitor systems that use specific types of control mechanisms, in this case control based on a trained artificial neural network (ANN).  It also demonstrates how to incorporate analytical software into the executable model and how to build a model that executes in multiple processes (JVMs).  The example model includes a number of jar files that are needed to build, train, and execute the ANN.  These dependencies are included in the model's "module-info" file and should be included on the java command line's `--module-path` for the applicable process.  A `.bat` file for each of the processes used to execute the model is included in the example model folder for possible use in executing the model.  In any case, model block processes should be started in the following sequence.
 
- - Controller container
- - Sensor container
- - Patient container
+ 1. Controller container
+ 2. Sensor container
+ 3. Patient container
 
-The AIControlledDBSSystem model uses a constraint block with constraint parameters that are bound to the the inputs and outputs of the ANN.  These ANN inputs and outputs are translated into a time-based table that is sent to a display.  Using objects in the SysMLinJava API/MDF, a textual representation of the ANN I/O table can be displayed.  The tool described above will, when available, provide the complete graphical display of the table.
+The AIControlledDBSSystem model uses a constraint block with constraint parameters that are bound to the the inputs and outputs of the ANN.  These ANN inputs and outputs are translated into a time-based table that is sent to a display.  Using objects in the SysMLinJava API/MDF, a textual representation of the ANN I/O table can be displayed.  The tool described above will, when available, provide a complete real-time graphical display of the table.
 
 ### C4S2SystemsOfSystems
 The C4S2SystemsOfSystems model demonstrates how to build a model for a "system-of-systems" where the systems include fixed and mobile systems that interface/communicate via unique protocols.  The example model executes as a single process with each system component operating asychronously in separate threads.
@@ -72,7 +72,7 @@ The model is almost exclusively an application of the SysMLinJava state machine.
 This model's dependencies are specified in the model's `module-info.java` file.  In addition to the standard Java API, it "requires transitive" only the SysMLinJava module.  
 
 ### HFDataLinkedSystem
-The HFDataLinkedSystem model demonstrates how to build a model that uses models of interfaces between systems and components that are highly detailed.  That is, the interfaces are modeled as complete operable protocol "stacks".   for a "system-of-systems" where the systems interfce/communicate via "protocol stacks".  The example model executes as a single process with each system component operating asychronously in separate threads.  Some of the communications protocols also operate asynchronously as well.
+The HFDataLinkedSystem model demonstrates how to build a model that uses models of interfaces between systems and components that are highly detailed.  That is, the interfaces are modeled as complete operable protocol "stacks".   for a "system-of-systems" where the systems interface/communicate via "protocol stacks".  The example model executes as a single process with each system component operating asychronously in separate threads.  Some of the communications protocols also operate asynchronously as well.
 
 The model consists of a command/control/computer/communications (C4) 
 
@@ -87,6 +87,8 @@ This model's dependencies are specified in the model's `module-info.java` file. 
 The TrafficSignalControlSystem model demonstrates how to model a system having sub-state machines for states in its state-machine.
 
 Once again, using objects in the SysMLinJava API/MDF, a textual representation of the state tables and timing diagrams for each of the system's sub-state and state machines can be produced by the model during execution.  The tool described above will, when available, provide the complete graphical display of the state tables and timing diagrams for the system's state-based behaviors.
+
+This model's dependencies are specified in the model's `module-info.java` file.  In addition to the standard Java API, it "requires transitive" only the SysMLinJava module.
 
 ## Contact for Comments, Questions, Requests for Training or Assistance
 Send any comments, questions, or requests for training or assistance to sysmlinjava@earthlink.net.
