@@ -1,0 +1,34 @@
+
+package motorinwheel.common.ports.energy;
+
+import motorinwheel.common.signals.AcceleratorPedalForceSignal;
+import sysmlinjava.attributetypes.ForceNewtons;
+import sysmlinjava.common.SysMLAnything;
+import sysmlinjava.items.SysMLSignal;
+import sysmlinjava.parts.SysMLPart;
+import sysmlinjava.ports.SysMLPort;
+
+public class AcceleratorPedalForceTransmitPort extends SysMLPort
+{
+	/**
+	 * Constructor
+	 * 
+	 * @param contextPart part in whose context the port resides
+	 * @param id           unique ID
+	 */
+	public AcceleratorPedalForceTransmitPort(SysMLPart contextPart, Long id)
+	{
+		super(contextPart, id);
+	}
+
+	@Override
+	protected SysMLSignal signalFor(SysMLAnything object)
+	{
+		SysMLSignal result = null;
+		if (object instanceof ForceNewtons)
+			result = new AcceleratorPedalForceSignal((ForceNewtons)object, id);
+		else
+			logger.warning("unexpected object type: " + object.getClass().getSimpleName());
+		return result;
+	}
+}
