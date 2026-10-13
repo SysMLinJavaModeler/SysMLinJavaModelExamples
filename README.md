@@ -86,7 +86,7 @@ The model of the EV uses the SysML port for all its many interfaces between comp
 
 This model's dependencies are specified in the model's `module-info.java` file.  In addition to the standard Java API, it "requires transitive" only the SysMLinJava module.
 
-## TrafficSignalControlSystem
+### TrafficSignalControlSystem
 The TrafficSignalControlSystem model demonstrates how to model a system having sub-state machines for states in its state-machine.
 
 Once again, using objects in the SysMLinJava API, a textual representation of the state tables and timing diagrams for each of the system's sub-state and state machines can be produced by the model during execution.  The tool described above will, when available, provide the complete graphical display of the state tables and timing diagrams for the system's state-based behaviors.
